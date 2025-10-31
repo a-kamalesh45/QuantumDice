@@ -1,0 +1,124 @@
+/* DiceCard.css */
+
+.dice-card {
+  background: var(--card-bg);
+  /* NEW: Colorful border */
+  border: 2px solid var(--brand-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 200px;
+  flex: 1;
+
+  /* *** KEY FIX ***
+    This flex layout ensures the card sections stack vertically
+    and allows the history to grow while the dropdown stays at the bottom.
+  */
+  display: flex;
+  flex-direction: column;
+}
+
+.dice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-color);
+}
+
+.dice-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.dice-card-title {
+  font-weight: 600;
+  margin: 0;
+  color: var(--brand-color); /* Colorful title */
+}
+
+.dice-card-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* History section */
+.dice-history-section {
+  margin-top: 12px;
+  /* *** KEY FIX ***
+    This makes the history section take up all available space,
+    pushing the dropdown to the bottom.
+  */
+  flex-grow: 1;
+}
+
+.dice-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+/* *** KEY FIX ***
+  This container now has a fixed height and scrolls vertically,
+  which fixes the uneven bottoms AND shows all history.
+*/
+.dice-history {
+  display: flex;
+  flex-wrap: wrap; /* Changed to flex-wrap */
+  gap: 6px;
+  font-size: 0.9rem;
+  height: 100px; /* Fixed height */
+  overflow-y: auto; /* Scroll! */
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px;
+  align-content: flex-start; /* Aligns pills to the top */
+}
+
+/* History "pill" */
+.dice-history div {
+  background: var(--accent-bg);
+  color: var(--accent-text);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 500;
+  height: fit-content;
+}
+
+.no-rolls {
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+  padding-top: 24px;
+}
+
+/* Select dropdown */
+.dice-select-wrapper {
+  margin-top: 16px;
+  /* This section will now be at the bottom */
+}
+
+.dice-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dice-select:focus {
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}

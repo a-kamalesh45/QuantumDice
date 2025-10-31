@@ -1,0 +1,124 @@
+/* GuessPanel.css */
+
+.guess-panel {
+  /* This component will now be wrapped in a .card in page.jsx */
+  /* No more backdrop-filter or shadows here. */
+  width: 100%;
+}
+
+.guess-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.guess-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* Use the new global .btn-link class */
+.clear-btn {
+  background: none;
+  border: none;
+  color: var(--brand-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.clear-btn:hover {
+  text-decoration: underline;
+}
+
+.guess-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.guess-cell {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 8px;
+  background: #f8fafc; /* slate-50 */
+}
+
+.guess-die {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.guess-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 4px;
+  color: var(--text-primary);
+}
+
+.guess-tip {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* GuessPanel.css */
+.guess-panel {
+  width: 100%;
+}
+.guess-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.guess-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+/* .clear-btn is now .btn-link, styled in App.css */
+
+.guess-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.guess-cell {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 8px;
+  background: #f8fafc; /* slate-50 */
+}
+.guess-die {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+.guess-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 4px;
+  color: var(--text-primary);
+  /* Prevent long names from breaking layout */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem; /* Smaller font for long names */
+}
+.guess-tip {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

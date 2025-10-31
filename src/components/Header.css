@@ -1,0 +1,56 @@
+/* Header.css */
+
+.header {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.header-title {
+  font-size: 2.25rem;
+  /* Use the global sans-serif font for consistency */
+  font-family: var(--font-sans);
+  font-weight: 700;
+  /* Use global color variable */
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.header-description {
+  max-width: 700px;
+  font-size: 1rem; /* Slightly larger for better readability */
+  line-height: 1.6;
+  /* Use global secondary color variable */
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Header.css */
+/* Header.css */
+.header {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row; /* Changed */
+  align-items: center; /* Changed */
+  justify-content: space-between; /* Changed */
+  gap: 24px; /* Changed */
+}
+
+.header-title {
+  font-size: 2.25rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--brand-color);
+  margin: 0;
+}
+
+.header-description {
+  max-width: 700px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+

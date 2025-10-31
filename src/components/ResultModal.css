@@ -1,0 +1,175 @@
+/* ResultModal.css */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 62, 138, 0.6); /* Use brand color for overlay */
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  z-index: 10;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  padding: 24px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--brand-color);
+}
+
+.modal-note {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.result-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--bg-color);
+}
+
+.score-card {
+  background: var(--cta-color);
+  border-color: var(--cta-color-hover);
+}
+.score-card .result-heading {
+  color: black;
+}
+.score-card .result-number {
+  color: var(--brand-color);
+}
+.score-card .result-small {
+  color: #333;
+}
+
+
+.result-heading {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.result-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 4px;
+  color: var(--brand-color);
+}
+
+.result-small {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* Truth comparison */
+.truth-section {
+  margin-top: 24px;
+}
+
+.truth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.truth-cell {
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 4px;
+  border: 1px solid transparent;
+}
+
+.truth-ok {
+  background: var(--correct-bg);
+  border-color: var(--correct-border);
+}
+.truth-ok .truth-title {
+  color: var(--brand-secondary);
+}
+
+.truth-bad {
+  background: var(--wrong-bg);
+  border-color: var(--wrong-border);
+}
+.truth-bad .truth-title {
+  color: var(--cta-color-hover);
+}
+
+.truth-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.truth-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.truth-text strong {
+  color: var(--text-primary);
+}
+
+/* Inputs and buttons */
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.name-input {
+  flex: 1 1 200px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.name-input:focus {
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.modal-actions .btn-secondary {
+  margin-left: auto;
+}

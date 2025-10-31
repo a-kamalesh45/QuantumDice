@@ -1,0 +1,155 @@
+/* Leaderboard.css */
+
+/* This component is now meant to be placed *inside* a .card,
+   so we remove all card-like styles from the root. */
+.leaderboard {
+  width: 100%;
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leaderboard-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+  /* Use global color */
+  color: var(--text-primary);
+}
+
+/* The .leaderboard-clear rule is no longer needed
+  as .btn-link from App.css handles its styling.
+*/
+
+.leaderboard-body {
+  margin-top: 12px;
+}
+
+.leaderboard-empty {
+  font-size: 0.9rem;
+  /* Use global color */
+  color: var(--text-secondary);
+}
+
+.leaderboard-list {
+  margin-top: 8px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Use borders for separation */
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Replaced card-item style with a clean border separator */
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 4px;
+}
+
+/* Remove border from the last item */
+.leaderboard-list li:last-child .leaderboard-item {
+  border-bottom: none;
+}
+
+.leaderboard-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.leaderboard-meta {
+  font-size: 0.85rem;
+  /* Use lighter text color for meta info */
+  color: var(--text-light);
+}
+
+.leaderboard-score {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+/* Leaderboard.css */
+
+.leaderboard-page {
+  max-width: 800px;
+  margin: 0 auto; /* Center the leaderboard page */
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leaderboard-title {
+  font-weight: 600;
+  font-size: 1.5rem; /* Larger title */
+  margin: 0;
+  color: var(--brand-color);
+}
+
+.leaderboard-body {
+  margin-top: 24px;
+}
+
+.leaderboard-empty {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 40px;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--card-bg);
+  transition: background 0.25s ease;
+}
+
+.leaderboard-item:hover {
+  background: var(--bg-color);
+}
+
+.leaderboard-rank {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-secondary);
+  width: 40px;
+}
+
+.leaderboard-details {
+  flex-grow: 1;
+}
+
+.leaderboard-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.leaderboard-meta {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.leaderboard-score {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cta-color);
+}

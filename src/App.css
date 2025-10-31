@@ -1,0 +1,241 @@
+/* App.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* User's Color Palette */
+  --brand-color: #023e8a; /* Marian Blue (Primary / Navbar) */
+  --brand-color-hover: #012a5c; /* Darker blue */
+  --brand-secondary: #0077b6; /* Honolulu Blue (Accents / Borders) */
+  --brand-secondary-hover: #005f90;
+  --brand-accent: #00b4d8; /* Pacific Cyan (Active Link) */
+  
+  --cta-color: #ff9e00; /* Orange Peel (Call to Action - "Roll") */
+  --cta-color-hover: #ff6d00; /* Pumpkin (CTA Hover) */
+
+  /* Light accent for pills, derived from cyan */
+  --accent-bg: #e0f7ff; 
+  --accent-text: #0077b6;
+  
+  /* Result colors */
+  --correct-bg: #e0f7ff;
+  --correct-border: #00b4d8;
+  --wrong-bg: #fff5e6;
+  --wrong-border: #ff9e00;
+
+  /* Neutrals */
+  --bg-color: #f8fafc; /* slate-50 */
+  --card-bg: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-light: #64748b;
+  --border-color: #e2e8f0;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.06),
+    0 2px 4px -2px rgb(0 0 0 / 0.06);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-color);
+  color: var(--text-primary);
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+  padding-top: 80px; 
+}
+
+/* -------------------- Navbar -------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 64px;
+  background: var(--brand-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #cceeff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: var(--brand-secondary-hover);
+  color: white;
+}
+
+.nav-link.active {
+  background: var(--brand-accent);
+  color: var(--brand-color);
+  font-weight: 600;
+}
+
+/* -------------------- App Shell -------------------- */
+.app-container {
+  min-width: 99vw;
+  overflow-x: hidden;
+}
+
+.app-shell {
+  padding: 32px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* -------------------- Layout -------------------- */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+/* -------------------- Card Style -------------------- */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 0;
+}
+
+/* -------------------- Button Hierarchy -------------------- */
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: var(--brand-color);
+  color: white;
+  border-color: var(--brand-color);
+}
+.btn-primary:not(:disabled):hover {
+  background-color: var(--brand-color-hover);
+  border-color: var(--brand-color-hover);
+}
+
+.btn-cta {
+  background-color: var(--cta-color);
+  color: black;
+  border-color: var(--cta-color);
+}
+.btn-cta:not(:disabled):hover {
+  background-color: var(--cta-color-hover);
+  border-color: var(--cta-color-hover);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--card-bg);
+  color: var(--brand-secondary);
+  border: 2px solid var(--brand-secondary);
+}
+.btn-secondary:not(:disabled):hover {
+  background-color: var(--brand-secondary);
+  color: white;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--brand-secondary);
+  padding: 4px;
+  font-weight: 500;
+}
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- Dice Grid -------------------- */
+.dice-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* NEW: Increased spacing */
+  gap: 24px; 
+  margin-top: 24px;
+}
+
+@media (max-width: 1200px) {
+  .dice-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+  }
+}
+
+/* -------------------- Status Card -------------------- */
+.status-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 8px 0;
+}
+.status-line span {
+  font-weight: 500;
+}
+.status-line strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.status-line .penalty-score {
+  color: var(--cta-color-hover);
+  font-weight: 700;
+}
+
+
+/* -------------------- Bottom Grid Info -------------------- */
+.bottom-grid h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
