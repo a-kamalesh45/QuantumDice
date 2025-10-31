@@ -94,7 +94,7 @@
 }
 
 .leaderboard-body {
-  margin-top: 24px;
+  margin-top: 0; /* <-- FIX: Removed unnecessary top margin */
 }
 
 .leaderboard-empty {
@@ -153,3 +153,4 @@
   font-weight: 700;
   color: var(--cta-color);
 }
+/* <-- FIX: Removed extra closing brace */

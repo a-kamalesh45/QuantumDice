@@ -107,6 +107,7 @@ export default function Page() {
     setGuesses(Array(5).fill(""));
     setResult(null);
     setModalOpen(false);
+    setPage("game"); // <--FIX: Navigate back to the game page
   }
 
   function onRoll() {

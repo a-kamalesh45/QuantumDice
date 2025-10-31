@@ -42,8 +42,9 @@ body {
   font-family: var(--font-sans);
   background: var(--bg-color);
   color: var(--text-primary);
-  min-height: 100vh;
-  min-width: 100vw;
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   padding-top: 80px; 
