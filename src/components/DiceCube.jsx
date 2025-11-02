@@ -91,7 +91,7 @@ export default function DiceCube({ face }) {
         <div className="dice-cube-face face-3">3</div>
         <div className="dice-cube-face face-4">4</div>
         <div className="dice-cube-face face-5">5</div>
-        <div className="dice-cube-face face-6">6</div>
+        <div className="dice-cube-face face-6">9</div>
       </motion.div>
     </div>
   );
